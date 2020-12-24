@@ -1,0 +1,90 @@
+// переменные основных цветов
+$color_1:#E0E0AB;
+$color_2: #C1D1A0	;
+$color_3: #B489A1;
+$color_4: #8A7496;
+// https://colorscheme.ru/#1T41T7.s76q6q  текущие цветовые схемы по этой ссылке
+//-------------------------------
+
+// breikpoints
+$fone: 320px;
+$smaller: 480px;
+$tablet: 768px;
+$medium: 960px;
+$desktop: 1200px;
+$lardg: 1500px;
+
+//------ОТСТУПЫ------------
+$margin: 15px;
+
+
+
+body{
+    display: grid;
+    grid-template-columns: 1fr;
+   grid-template-rows:max-content auto max-content;
+   grid-template-areas: "шапка" "контент" "подвал";
+   min-height: 100vh;
+   //-----------
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+.header{
+    display: grid;
+    grid-area: шапка;
+    background-color: $color_1;
+}
+
+.main{
+    display: grid;
+    // justify-items: stretch;
+    grid-area: контент;
+}
+
+.footer{
+    display: grid;
+    grid-area: подвал;
+    height: 100px;
+    background-color: $color_4;
+}
+
+.conteiner{
+    display: grid;
+    justify-self: center;
+    width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: $desktop;
+
+}
+//----------заголовки------
+h1, .h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2, .h2 {
+    font-size: 2rem;
+  }
+  
+  h3, .h3 {
+    font-size: 1.75rem;
+  }
+  
+  h4, .h4 {
+    font-size: 1.5rem;
+  }
+  
+  h5, .h5 {
+    font-size: 1.25rem;
+  }
+  
+  h6, .h6 {
+    font-size: 1rem;
+  }

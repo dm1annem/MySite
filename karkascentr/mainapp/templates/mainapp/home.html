@@ -1,0 +1,41 @@
+{% extends 'mainapp/main.html' %}
+{% load static %}
+
+{% block content %}
+   
+ <!-- ============Первый экран=========== -->
+    <div style="background: url({% static 'mainapp\img\first_screen_background.webp'%}) center/cover ">
+        
+    
+        <div class="conteiner initial_scrin">
+            <div class="headings">
+                <h1>КАРКАСНЫЕ <br>ДОМА, ДАЧИ И БАНИ В БРЯНСКЕ</h1>
+                <h3>строим под ключ по фиксированной смете с гарантией 5 лет</h3>
+            </div>
+            
+            <div class="form_Initial_Sckrin">
+                <form>
+                    <input type="text">
+                    <input type="button" placeholder="Отправить">
+                </form>
+
+            </div>
+
+            <div class="initialSckrinAdres">
+                <h5>  г. Брянск, ул Пушкина, д. 66  </h5>
+            </div>
+                     
+        </div>
+
+   
+             
+    </div>
+    
+ <!-- ==========Второй экран ============= -->
+    <div class="conteiner">
+         <h2>Главная </h2>
+    </div>
+        
+
+
+{% endblock %}

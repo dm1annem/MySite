@@ -1,0 +1,35 @@
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Строительство домов в Брянске - КаркасЦентр</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/361a786796.css">
+    <link rel="stylesheet" href="{% static 'mainapp/css/my.css' %}">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+   
+</head>
+<body>
+    <header class="header">
+        {% include 'mainapp/includes/header.html' %}
+    </header>
+
+    <div class="main">
+
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <footer class="footer">
+        {% include 'mainapp/includes/footer.html' %}
+    </footer>
+
+<!--    <script src="mainapp/js/vue_app.js"></script>-->
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="{% static 'mainapp/js/script.js' %}"></script>
+</body>
+</html>

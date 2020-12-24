@@ -1,0 +1,303 @@
+@charset "UTF-8";
+/* ===== ШАПКА САЙТА ===== */
+.pageHeader {
+  display: grid;
+  grid-area: шапка;
+  background-color: gold;
+}
+
+/*springgreen*/
+.shapka {
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 1fr 3fr 2fr -webkit-max-content;
+  grid-template-columns: 1fr 3fr 2fr max-content;
+  grid-template-rows: auto auto;
+  grid-template-areas: "лого текст перезвонить контакты" "меню меню меню контакты";
+  padding: 10px 20px 0 20px;
+  max-width: 1500px;
+}
+
+.shapka a {
+  text-decoration: none;
+}
+
+.brand {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  display: grid;
+  justify-content: start;
+  align-content: start;
+  padding-right: 10px;
+  grid-area: лого;
+}
+
+.logo {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #505050;
+  border: 1px solid orange;
+}
+
+.logo p {
+  margin: -0.1rem;
+  padding: 0 0.5rem 0.3rem 0.5rem;
+}
+
+.l1w {
+  color: white;
+  font-size: 2rem;
+}
+
+.l2w {
+  color: gold;
+  font-size: 2rem;
+}
+
+.triger {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  display: grid;
+  align-content: start;
+  justify-content: start;
+  padding-left: 10px;
+  grid-area: текст;
+}
+
+.triger p {
+  margin: 0 auto;
+  padding: 0 0 0 1rem;
+  font-size: 1rem;
+  border-left: dashed rgba(2, 15, 28, 0.2) 1px;
+  color: #505050;
+}
+
+.consultation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  display: grid;
+  justify-content: end;
+  grid-area: перезвонить;
+}
+
+.consultation p {
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 2px 30px;
+  color: gray;
+}
+
+.consultation p:hover {
+  background-color: orange;
+  color: white;
+  border: 0;
+}
+
+.contacts-head {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  display: grid;
+  align-content: start;
+  justify-content: end;
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+  grid-area: контакты;
+}
+
+.contacts-head a {
+  color: #505050;
+}
+
+.contacts-head p {
+  margin: 0;
+  color: #505050;
+}
+
+.nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: grid;
+  grid-area: меню;
+  justify-content: start;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin: 0 1.5rem;
+  text-decoration: none;
+}
+
+.nav span {
+  color: #505050;
+}
+
+/* -- ИКОНКА В АДАПТИВНОМ МЕНЮ --*/
+.icon {
+  background-color: blue;
+  justify-content: center;
+  align-content: center;
+}
+
+.menu-btn {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: orange;
+  border-radius: 5px;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  /*position: absolute;*/
+  /*top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -1px;*/
+  width: 40px;
+  height: 2px;
+  background-color: white;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+  content: "";
+  display: block;
+  transition: 0.5s;
+}
+
+.menu-btn span::before {
+  transform: translateY(-9px);
+}
+
+.menu-btn span::after {
+  transform: translateY(7px);
+}
+
+.menu-btn_active span {
+  height: 0;
+}
+
+.menu-btn_active span:before {
+  transform: rotate(45deg);
+}
+
+.menu-btn_active span:after {
+  transform: rotate(-45deg);
+}
+
+/* ----------конец иконки------------*/
+@media (min-width: 992px) {
+  .icon-menu {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .shapka {
+    grid-template-columns: 1fr 3fr 2fr -webkit-max-content;
+    grid-template-columns: 1fr 3fr 2fr max-content;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "лого текст перезвонить контакты" ". . . контакты" "меню меню меню меню";
+  }
+
+  .triger p {
+    margin-right: -100px;
+  }
+
+  .consultation p {
+    margin-right: -100px;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+  .brand {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .triger {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .consultation {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .contacts-head {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+  }
+  .nav {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+  }
+}
+@media (max-width: 991px) {
+  .triger,
+.consultation,
+.contacts-head {
+    display: none;
+  }
+
+  .icon-menu {
+    display: grid;
+    grid-area: иконка;
+    justify-content: end;
+  }
+
+  .shapka {
+    display: grid;
+    grid-template-columns: 2fr auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "лого . иконка" "меню меню меню";
+    padding: 10px 10px 10px 10px;
+    justify-self: stretch;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .nav ul li {
+    display: block;
+    text-align: center;
+    border-bottom: 1px dashed orange;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+
+  .brand {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
+@media (max-width: 991px){
+
+  .icon-menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+/*===КОНЕЦ ШАПКИ ==== */

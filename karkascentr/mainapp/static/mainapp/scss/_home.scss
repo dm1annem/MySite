@@ -1,0 +1,56 @@
+
+.initial_scrin{
+    display: grid;
+    justify-items: stretch;
+        
+    h1{
+        display: grid;
+        color: honeydew;
+        // padding-top: 30px;
+    }
+
+    h3{
+        color: honeydew;
+    }
+} 
+
+.headings{
+    display: grid;
+    grid-area: заголовки; 
+    background-color: rgba(84, 76, 87, 0.644);
+}
+
+
+.form_Initial_Sckrin{
+    display: none;    
+}
+
+.initialSckrinAdres{
+    display: none;
+
+}
+
+
+@media (min-width:  $medium){
+
+    .initial_scrin{
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: 
+    ". адрес_1"
+    "заголовки форма";
+    }
+
+    .form_Initial_Sckrin{
+        display: grid;
+        grid-area: форма;
+    }
+    
+    .initialSckrinAdres{
+        display: grid;
+        justify-content: end;
+        // justify-self: end;
+        grid-area: адрес_1;
+        color: honeydew;
+    }
+};

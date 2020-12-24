@@ -1,0 +1,525 @@
+@charset "UTF-8";
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  outline: none;
+}
+
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+a,
+a:visited {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+
+/*--------------------*/
+body {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: -webkit-max-content auto -webkit-max-content;
+  grid-template-rows: max-content auto max-content;
+  grid-template-areas: "шапка" "контент" "подвал";
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: #fff;
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  display: grid;
+  grid-area: шапка;
+  background-color: #E0E0AB;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  display: grid;
+  grid-area: контент;
+}
+
+.footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  display: grid;
+  grid-area: подвал;
+  height: 100px;
+  background-color: #8A7496;
+}
+
+.conteiner {
+  display: grid;
+  justify-self: center;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1200px;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.25rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+/* ===== ШАПКА САЙТА ===== */
+.pageHeader {
+  display: grid;
+  background-color: #E0E0AB;
+}
+
+/*springgreen*/
+.shapka {
+  display: grid;
+  justify-self: center;
+  grid-template-columns: 1fr 3fr 2fr -webkit-max-content;
+  grid-template-columns: 1fr 3fr 2fr max-content;
+  grid-template-rows: auto auto;
+  grid-template-areas: "лого текст перезвонить контакты" "меню меню меню контакты";
+  padding: 10px 20px 0 20px;
+  max-width: 1500px;
+}
+
+.shapka a {
+  text-decoration: none;
+}
+
+.brand {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  display: grid;
+  justify-content: start;
+  align-content: start;
+  padding-right: 10px;
+  grid-area: лого;
+}
+
+.logo {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  background-color: #505050;
+  border: 1px solid #797373;
+}
+
+.logo p {
+  margin: -0.1rem;
+  padding: 0 0.5rem 0.3rem 0.5rem;
+}
+
+.l1w {
+  color: white;
+  font-size: 2rem;
+}
+
+.l2w {
+  color: goldenrod;
+  font-size: 2rem;
+}
+
+.triger {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  display: grid;
+  align-content: start;
+  justify-content: start;
+  padding-left: 10px;
+  grid-area: текст;
+}
+
+.triger p {
+  margin: 0 auto;
+  padding: 0 0 0 1rem;
+  font-size: 1rem;
+  border-left: dashed rgba(2, 15, 28, 0.2) 1px;
+  color: #505050;
+}
+
+.consultation {
+  -ms-grid-row: 1;
+  -ms-grid-column: 3;
+  display: grid;
+  justify-content: end;
+  grid-area: перезвонить;
+}
+
+.consultation p {
+  text-align: center;
+  border: 1px solid gray;
+  border-radius: 10px;
+  margin: 0 auto;
+  padding: 2px 30px;
+  color: gray;
+}
+
+.consultation p:hover {
+  background-color: #C1D1A0;
+  color: white;
+  border: 0;
+}
+
+.contacts-head {
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 4;
+  display: grid;
+  align-content: start;
+  justify-content: end;
+  text-align: right;
+  margin: 0px;
+  padding: 0px;
+  grid-area: контакты;
+}
+
+.contacts-head a {
+  color: #505050;
+}
+
+.contacts-head p {
+  margin: 0;
+  color: #505050;
+}
+
+.nav {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  display: grid;
+  grid-area: меню;
+  justify-content: start;
+}
+
+.nav ul {
+  list-style: none;
+}
+
+.nav ul li {
+  display: inline-block;
+  margin: 0 1.5rem;
+  text-decoration: none;
+}
+
+.nav span {
+  color: #505050;
+}
+
+/* -- ИКОНКА В АДАПТИВНОМ МЕНЮ --*/
+.icon {
+  background-color: blue;
+  justify-content: center;
+  align-content: center;
+}
+
+.menu-btn {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: #C1D1A0;
+  border-radius: 5px;
+}
+
+.menu-btn span,
+.menu-btn span::before,
+.menu-btn span::after {
+  /*position: absolute;*/
+  /*top: 50%; margin-top: -1px;
+  left: 50%; margin-left: -1px;*/
+  width: 40px;
+  height: 2px;
+  background-color: white;
+}
+
+.menu-btn span::before,
+.menu-btn span::after {
+  content: "";
+  display: block;
+  transition: 0.5s;
+}
+
+.menu-btn span::before {
+  transform: translateY(-9px);
+}
+
+.menu-btn span::after {
+  transform: translateY(7px);
+}
+
+.menu-btn_active span {
+  height: 0;
+}
+
+.menu-btn_active span:before {
+  transform: rotate(45deg);
+}
+
+.menu-btn_active span:after {
+  transform: rotate(-45deg);
+}
+
+/* ----------конец иконки------------*/
+@media (min-width: 992px) {
+  .icon-menu {
+    display: none;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .shapka {
+    grid-template-columns: 1fr 3fr 2fr -webkit-max-content;
+    grid-template-columns: 1fr 3fr 2fr max-content;
+    grid-template-rows: auto auto auto;
+    grid-template-areas: "лого текст перезвонить контакты" ". . . контакты" "меню меню меню меню";
+  }
+
+  .triger p {
+    margin-right: -100px;
+  }
+
+  .consultation p {
+    margin-right: -100px;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+  .brand {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+  .triger {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+  .consultation {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+  .contacts-head {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 2;
+    -ms-grid-column: 4;
+  }
+  .nav {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 4;
+  }
+}
+@media (max-width: 991px) {
+  .triger,
+.consultation,
+.contacts-head {
+    display: none;
+  }
+
+  .icon-menu {
+    display: grid;
+    grid-area: иконка;
+    justify-content: end;
+  }
+
+  .shapka {
+    display: grid;
+    grid-template-columns: 2fr auto 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: "лого . иконка" "меню меню меню";
+    padding: 10px 10px 10px 10px;
+    justify-self: stretch;
+  }
+
+  .nav {
+    justify-content: center;
+  }
+
+  .nav ul {
+    display: none;
+  }
+
+  .nav ul li {
+    display: block;
+    text-align: center;
+    border-bottom: 1px dashed orange;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+  }
+
+  .brand {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+  }
+
+  .nav {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
+  }
+}
+@media (max-width: 991px){
+
+  .icon-menu {
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
+  }
+}
+/*===КОНЕЦ ШАПКИ ==== */
+.initial_scrin {
+  display: grid;
+  justify-items: stretch;
+}
+.initial_scrin h1 {
+  display: grid;
+  color: honeydew;
+}
+.initial_scrin h3 {
+  color: honeydew;
+}
+
+.headings {
+  display: grid;
+  grid-area: заголовки;
+  background-color: rgba(84, 76, 87, 0.644);
+}
+
+.form_Initial_Sckrin {
+  display: none;
+}
+
+.initialSckrinAdres {
+  display: none;
+}
+
+@media (min-width: 960px) {
+  .initial_scrin {
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto auto;
+    grid-template-areas: ". адрес_1" "заголовки форма";
+  }
+
+  .form_Initial_Sckrin {
+    display: grid;
+    grid-area: форма;
+  }
+
+  .initialSckrinAdres {
+    display: grid;
+    justify-content: end;
+    grid-area: адрес_1;
+    color: honeydew;
+  }
+  .headings {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+  }
+}
+
+@media (min-width: 960px){
+  .form_Initial_Sckrin {
+    -ms-grid-row: 2;
+    -ms-grid-column: 2;
+  }
+  .initialSckrinAdres {
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+  }
+}
