@@ -6,7 +6,7 @@
     h1{
         display: grid;
         color: honeydew;
-        // padding-top: 30px;
+        
     }
 
     h3{
@@ -17,7 +17,6 @@
 .headings{
     display: grid;
     grid-area: заголовки; 
-    background-color: rgba(84, 76, 87, 0.644);
 }
 
 
@@ -44,6 +43,7 @@
     .form_Initial_Sckrin{
         display: grid;
         grid-area: форма;
+        background-color: $color_4;
     }
     
     .initialSckrinAdres{
@@ -52,5 +52,12 @@
         // justify-self: end;
         grid-area: адрес_1;
         color: honeydew;
+
+        h5{
+            padding-top: 50px;
+            padding-bottom: 50px;
+        }
     }
+
+    
 };

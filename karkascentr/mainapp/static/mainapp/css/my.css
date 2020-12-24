@@ -198,8 +198,8 @@ h6, .h6 {
   display: grid;
   justify-content: center;
   align-content: center;
-  background-color: #505050;
-  border: 1px solid #797373;
+  background-color: #000000a4;
+  border: 1px solid #7a545483;
 }
 
 .logo p {
@@ -213,7 +213,7 @@ h6, .h6 {
 }
 
 .l2w {
-  color: goldenrod;
+  color: orange;
   font-size: 2rem;
 }
 
@@ -328,7 +328,7 @@ h6, .h6 {
   left: 50%; margin-left: -1px;*/
   width: 40px;
   height: 2px;
-  background-color: white;
+  background-color: #8A7496;
 }
 
 .menu-btn span::before,
@@ -478,7 +478,6 @@ h6, .h6 {
 .headings {
   display: grid;
   grid-area: заголовки;
-  background-color: rgba(84, 76, 87, 0.644);
 }
 
 .form_Initial_Sckrin {
@@ -499,6 +498,7 @@ h6, .h6 {
   .form_Initial_Sckrin {
     display: grid;
     grid-area: форма;
+    background-color: #8A7496;
   }
 
   .initialSckrinAdres {
@@ -506,6 +506,10 @@ h6, .h6 {
     justify-content: end;
     grid-area: адрес_1;
     color: honeydew;
+  }
+  .initialSckrinAdres h5 {
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
   .headings {
     -ms-grid-row: 2;
