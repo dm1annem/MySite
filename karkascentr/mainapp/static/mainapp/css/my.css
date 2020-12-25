@@ -470,6 +470,7 @@ h6, .h6 {
 .initial_scrin h1 {
   display: grid;
   color: honeydew;
+  font-weight: bold;
 }
 .initial_scrin h3 {
   color: honeydew;
@@ -480,7 +481,7 @@ h6, .h6 {
   grid-area: заголовки;
 }
 
-.form_Initial_Sckrin {
+.wrapper_form_Initial_Sckrin {
   display: none;
 }
 
@@ -495,10 +496,13 @@ h6, .h6 {
     grid-template-areas: ". адрес_1" "заголовки форма";
   }
 
-  .form_Initial_Sckrin {
+  .wrapper_form_Initial_Sckrin {
     display: grid;
     grid-area: форма;
-    background-color: #8A7496;
+    background-color: rgba(0, 0, 0, 0.63);
+    padding: 15px;
+    margin: 15px;
+    color: honeydew;
   }
 
   .initialSckrinAdres {
@@ -511,6 +515,14 @@ h6, .h6 {
     padding-top: 50px;
     padding-bottom: 50px;
   }
+
+  .whatsapp_button_initiak_sckrin {
+    display: block;
+  }
+
+  .firstSckrinForm {
+    display: block;
+  }
   .headings {
     -ms-grid-row: 2;
     -ms-grid-column: 1;
@@ -518,7 +530,7 @@ h6, .h6 {
 }
 
 @media (min-width: 960px){
-  .form_Initial_Sckrin {
+  .wrapper_form_Initial_Sckrin {
     -ms-grid-row: 2;
     -ms-grid-column: 2;
   }

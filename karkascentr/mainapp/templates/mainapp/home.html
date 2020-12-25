@@ -4,7 +4,7 @@
 {% block content %}
    
  <!-- ============Первый экран=========== -->
-    <div style="background: linear-gradient( #000000c5, #000000af), url({% static 'mainapp\img\first_screen_background.webp'%}) center /cover ">
+    <div style="background: linear-gradient( #0000009d, #00000098), url({% static 'mainapp\img\first_screen_background.webp'%}) center /cover ">
         
     
         <div class="conteiner initial_scrin">
@@ -13,11 +13,25 @@
                 <h3>строим под ключ по фиксированной смете с гарантией 5 лет</h3>
             </div>
             
-            <div class="form_Initial_Sckrin">
-                <form>
-                    <input type="text">
-                    <input type="button" placeholder="Отправить">
+            <div class="wrapper_form_Initial_Sckrin">
+
+                <div>
+                    <span> ОСТАВЬТЕ ЗАЯВКУ НА БЕСПЛАТНЫЙ РАСЧЁТ </span>
+                </div>
+                <form class="firstSckrinForm" action="" method="POST" name="form-1">
+
+                    <div>
+                        <label for="name">Имя</label> <br>
+                        <input type="text" name="name" required>
+                    </div>
+
+                    <button type="submit">Отправить</button>
                 </form>
+
+                <div class="whatsapp_button_initiak_sckrin">
+                    <span>или</span> <br>
+                    <button><a href="https://wa.me/message/S2HVLZUQSNBBN1">Напишите нам в WhatsApp</a></button>
+                </div>
 
             </div>
 
